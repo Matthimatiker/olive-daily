@@ -6,26 +6,41 @@
         <title>Olive Daily</title>
         <link href="./bootstrap-5.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <script src="./bootstrap-5.3.1/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <style>
+            /*
+             On page load, show the spinner and hide the content until it is ready.
+             */
+            #spinner-block {
+                display: block;
+            }
+
+            #content-block {
+                display: none;
+            }
+        </style>
     </head>
     <body>
 
-        <div class="px-4 pt-5 my-5 text-center">
+        <div class="px-4 pt-5 my-5 text-center" id="spinner-block">
             <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
 
-        <div class="px-4 pt-5 my-5 text-center">
-            <h3 class="display-4 fw-bold text-body-emphasis" id="content-headline">Queen Olive</h3>
+        <div class="px-4 pt-5 my-5 text-center" id="content-block">
+            <h3 class="display-4 fw-bold text-body-emphasis" id="content-headline">Searching for content...</h3>
             <div class="overflow-hidden">
                 <div class="container px-2">
-                    <img id="content-image" src="./images/queen-olive.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" loading="lazy">
+                    <img id="content-image"
+                         src="./images/queen-olive.jpeg"
+                         class="img-fluid border rounded-3 shadow-lg mb-4"
+                         alt=""
+                         loading="lazy"
+                    >
                 </div>
             </div>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4" id="content-text">Hello, I'm Olive. I'm a 13-year-old Beagle born in Puerto Rico, living in Germany.
-                    This is me on my 13th birthday. I like sleeping, eating, belly rubs and most importantly sleeping
-                and eating.</p>
+                <p class="lead mb-4" id="content-text">Loading...</p>
             </div>
         </div>
 

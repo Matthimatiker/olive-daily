@@ -1,19 +1,8 @@
 /**
- * @typedef {[{imagePath: string, headline: string, description: string}]} Content
+ * @typedef {{imagePath: string, headline: string, description: string}} Content
  */
 
 /**
- * @param imagePath {string}
- * @param headline {string}
- * @param description {string}
- * @return {Content}
- */
-function createContent(imagePath, headline, description) {
-
-}
-
-/**
- *
  * @type {Content[]}
  */
 const availableContent = [
@@ -28,6 +17,44 @@ const availableContent = [
     )
 ];
 
+/**
+ * @param imagePath {string}
+ * @param headline {string}
+ * @param description {string}
+ * @return {Content}
+ */
+function createContent(imagePath, headline, description) {
+    return {
+        imagePath: imagePath,
+        headline: headline,
+        description: description,
+    };
+}
+
+function hideSpinnerAndShowContent() {
+    const spinnerBlock = document.getElementById("spinner-block");
+    const contentBlock = document.getElementById("content-block");
+    spinnerBlock.style.display = "none";
+    contentBlock.style.display = "block";
+}
+
+/**
+ * @param content {Content}
+ */
+function renderContent(content) {
+    const headline = document.getElementById("content-headline");
+    const text = document.getElementById("content-text");
+    const image = document.getElementById("content-image");
+
+    headline.innerHTML = content.headline;
+    text.innerHTML = content.description;
+    image.onload = () => hideSpinnerAndShowContent();
+    image.src = content.imagePath;
+    image.alt = content.headline;
+    // Ensure that the browser begins downloading the image, although it may not be visible yet.
+    image.loading = "eager";
+}
+
 const startOfToday = new Date();
 startOfToday.setUTCHours(0, 0, 0, 0);
 const daysSince1970 = Math.floor(startOfToday.getTime() / 1000.0 / 365.25);
@@ -38,4 +65,4 @@ const index = daysSince1970 % availableContent.length;
  */
 const selectedContent = availableContent[index];
 
-
+renderContent(selectedContent);
