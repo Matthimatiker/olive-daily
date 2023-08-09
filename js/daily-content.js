@@ -47,12 +47,21 @@ function renderContent(content) {
     const image = document.getElementById("content-image");
 
     headline.innerHTML = content.headline;
-    text.innerHTML = content.description;
+    text.innerHTML = replaceLinebreaks(content.description);
     image.onload = () => hideSpinnerAndShowContent();
     image.src = content.imagePath;
     image.alt = content.headline;
     // Ensure that the browser begins downloading the image, although it may not be visible yet.
     image.loading = "eager";
+}
+
+/**
+ *
+ * @param text {string}
+ * @return {string} Text with HTML line breaks.
+ */
+function replaceLinebreaks(text) {
+    return text.replace("\n", "<br>");
 }
 
 const startOfToday = new Date();
