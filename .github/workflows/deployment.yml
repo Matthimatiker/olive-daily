@@ -1,0 +1,32 @@
+name: "Deployment"
+
+on:
+  # Run when someone pushes to master.
+  push:
+    branches:
+      - main
+
+jobs:
+  continuous-delivery:
+    name: "Build & deploy"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm install
+
+      # Deploy, when the pipeline was successful.
+      - name: Prepare Configuration for Git Push
+        uses: fregante/setup-git-token@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy
+        run: npm run deploy
