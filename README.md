@@ -1,6 +1,7 @@
 # Olive Daily
 
 Daily Olive content.
+![Alt text](images/queen-olive.jpeg "Queen Olive")
 
 ## Deployment
 
