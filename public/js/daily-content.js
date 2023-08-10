@@ -13,6 +13,12 @@ const availableContent = [
         This is me on my 13th birthday. I like sleeping, eating, belly rubs and most importantly sleeping
         and eating.
         `
+    ),
+    createContent(
+        './images/olive-pulli.jpeg',
+        'SparkPaws Hoodie',
+        `I don't like being cold, but also I don't like wearing things. But the SparkPaw Hoodies are cozy,
+        warm and simply awesome.`
     )
 ];
 
