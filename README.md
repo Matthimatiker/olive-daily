@@ -24,6 +24,10 @@ Example for the IntelliJ webserver (address may change on each local system):
 
     http://localhost:63342/olive-daily/public/index.html?_ijt=9g6fqea0cscnch2r8c1i4pfo1i&_ij_reload=RELOAD_ON_SAVE&content=2
 
+## Favicon
+
+The favicon has been generated with https://realfavicongenerator.net/.
+
 ## Deployment
 
 The page will be deployed automatically via GitHub Actions when pushing to the `main` branch.
