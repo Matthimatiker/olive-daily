@@ -17,6 +17,15 @@ const availableContent = [
     )
 ];
 
+const contentNumber = determineContentNumber();
+const contentIndex = contentNumber % availableContent.length;
+/**
+ * @type {Content}
+ */
+const selectedContent = availableContent[contentIndex];
+renderContent(selectedContent);
+
+
 /**
  * @param imagePath {string}
  * @param headline {string}
@@ -64,14 +73,24 @@ function replaceLinebreaks(text) {
     return text.replace("\n", "<br>");
 }
 
-const startOfToday = new Date();
-startOfToday.setUTCHours(0, 0, 0, 0);
-const daysSince1970 = Math.floor(startOfToday.getTime() / 1000.0 / 365.25);
-const index = daysSince1970 % availableContent.length;
-
 /**
- * @type {Content}
+ * Determines a "content number", which is used to find the content that should be shown.
+ *
+ * Any positive number is allowed as "content number". It is mapped to a content index
+ * in a following processing step.
+ * That also means, that multiple content numbers may refer to the same content entry.
+ *
+ * @return {number}
  */
-const selectedContent = availableContent[index];
-
-renderContent(selectedContent);
+function determineContentNumber() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("content")) {
+        // Specific content requested. Most probably for debugging.
+        return Number(urlParams.get("content"));
+    } else {
+        const startOfToday = new Date();
+        startOfToday.setUTCHours(0, 0, 0, 0);
+        const daysSince1970 = Math.floor(startOfToday.getTime() / 1000.0 / 365.25);
+        return daysSince1970;
+    }
+}
