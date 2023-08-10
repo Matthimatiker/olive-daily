@@ -24,6 +24,23 @@ const availableContent = [
         './images/magician-olive.jpeg',
         'Olive the Magician',
         `I am a magician with a towel I use as a cape.`
+    ),
+    createContent(
+        './images/cold-outside.jpeg',
+        'Cold Winter',
+        `I don't like going outside in the winter time, even with my jacket. It's just cold, wet and I prefer
+        to stay inside, even if I should go out. Please don't make me go outside.`
+    ),
+    createContent(
+        './images/head-massage.jpeg',
+        'SPA',
+        `I'm a princess. Usually I get a massage when I need to get a bath as a compensation for my strong
+        bath-endurance efforts.`
+    ),
+    createContent(
+        './images/sun.jpeg',
+        'Summertime',
+        `The balcony is awesome. But I do have to work hard, look cute and hopefully get some snacks.`
     )
 ];
 
