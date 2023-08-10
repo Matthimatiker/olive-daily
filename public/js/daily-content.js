@@ -9,16 +9,12 @@ const availableContent = [
     createContent(
         './images/queen-olive.jpeg',
         'Queen Olive',
-        `Hello, I'm Olive. I'm a 13-year-old Beagle born in Puerto Rico, living in Germany.
-        This is me on my 13th birthday. I like sleeping, eating, belly rubs and most importantly sleeping
-        and eating.
-        `
+        `Hello, I'm Olive. I'm a 13-year-old Beagle born in Puerto Rico, living in Germany. This is me on my 13th birthday. I like sleeping, eating, belly rubs and most importantly sleeping and eating.`
     ),
     createContent(
         './images/olive-pulli.jpeg',
         'SparkPaws Hoodie',
-        `I don't like being cold, but also I don't like wearing things. But the SparkPaw Hoodies are cozy,
-        warm and simply awesome.`
+        `I don't like being cold, but also I don't like wearing things. But the SparkPaw Hoodies are cozy, warm and simply awesome.`
     ),
     createContent(
         './images/magician-olive.jpeg',
@@ -28,14 +24,12 @@ const availableContent = [
     createContent(
         './images/cold-outside.jpeg',
         'Cold Winter',
-        `I don't like going outside in the winter time, even with my jacket. It's just cold, wet and I prefer
-        to stay inside, even if I should go out. Please don't make me go outside.`
+        `I don't like going outside in the winter time, even with my jacket. It's just cold, wet and I prefer to stay inside, even if I should go out. Please don't make me go outside.`
     ),
     createContent(
         './images/head-massage.jpeg',
         'SPA',
-        `I'm a princess. Usually I get a massage when I need to get a bath as a compensation for my strong
-        bath-endurance efforts.`
+        `I'm a princess. Usually I get a massage when I need to get a bath as a compensation for my strong bath-endurance efforts.`
     ),
     createContent(
         './images/sun.jpeg',
