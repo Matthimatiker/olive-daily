@@ -9,8 +9,7 @@ const availableContent = [
     createContent(
         './images/queen-olive.jpeg',
         'Queen Olive',
-        `
-        Hello, I'm Olive. I'm a 13-year-old Beagle born in Puerto Rico, living in Germany.
+        `Hello, I'm Olive. I'm a 13-year-old Beagle born in Puerto Rico, living in Germany.
         This is me on my 13th birthday. I like sleeping, eating, belly rubs and most importantly sleeping
         and eating.
         `
