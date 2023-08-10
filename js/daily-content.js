@@ -19,6 +19,11 @@ const availableContent = [
         'SparkPaws Hoodie',
         `I don't like being cold, but also I don't like wearing things. But the SparkPaw Hoodies are cozy,
         warm and simply awesome.`
+    ),
+    createContent(
+        './images/magician-olive.jpeg',
+        'Olive the Magician',
+        `I am a magician with a towel I use as a cape.`
     )
 ];
 
