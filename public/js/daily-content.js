@@ -111,7 +111,8 @@ function determineContentNumber() {
     } else {
         const startOfToday = new Date();
         startOfToday.setUTCHours(0, 0, 0, 0);
-        const daysSince1970 = Math.floor(startOfToday.getTime() / 1000.0 / 365.25);
+        const oneDayInSeconds = 24 * 3600;
+        const daysSince1970 = Math.floor(startOfToday.getTime() / 1000.0 / oneDayInSeconds);
         return daysSince1970;
     }
 }
