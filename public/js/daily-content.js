@@ -35,6 +35,16 @@ const availableContent = [
         './images/sun.jpeg',
         'Summertime',
         `The balcony is awesome. But I do have to work hard, look cute and hopefully get some snacks.`
+    ),
+    createContent(
+        './images/snacks.jpeg',
+        'Snacks',
+        `Hey! If you can't eat up all of what you are having now, I am more than happy to help you!`
+    ),
+    createContent(
+        './images/sleepy.jpeg',
+        'Mornings',
+        `Go back to sleep!`
     )
 ];
 
